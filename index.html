@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LarkSkill — Coming Soon</title>
+  <meta name="description" content="LarkSkill — Lark/Feishu workspace skills for AI coding agents. Setup guide: portal.larkskill.app/setup">
+  <link rel="icon" type="image/png" href="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png">
+  <link rel="apple-touch-icon" href="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png">
+  <meta property="og:title" content="LarkSkill">
+  <meta property="og:description" content="Lark/Feishu workspace skills for AI coding agents.">
+  <meta property="og:image" content="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://larkskill.app">
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --fg: #0a0a0a;
+      --muted: #71717a;
+      --accent: #2563eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0a0a0a; --fg: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      line-height: 1.5;
+    }
+    main {
+      max-width: 36rem;
+      text-align: center;
+    }
+    img.logo {
+      width: 88px;
+      height: 88px;
+      display: block;
+      margin: 0 auto 1.5rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+    p.lede {
+      color: var(--muted);
+      font-size: 1.0625rem;
+      margin: 0 0 2rem;
+    }
+    .links {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 0.625rem 1.25rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: opacity 0.15s ease;
+    }
+    a.btn:hover { opacity: 0.85; }
+    a.btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+    a.btn-ghost {
+      color: var(--fg);
+      border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+    }
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.8125rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png" alt="LarkSkill logo">
+    <h1>LarkSkill</h1>
+    <p class="lede">Lark / Feishu workspace skills for AI coding agents.<br>A full landing page is on the way.</p>
+    <div class="links">
+      <a class="btn btn-primary" href="https://portal.larkskill.app/setup">Get started</a>
+      <a class="btn btn-ghost" href="https://portal.larkskill.app">Portal</a>
+    </div>
+    <footer>© LarkSkill</footer>
+  </main>
+</body>
+</html>
