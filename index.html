@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LarkSkill — Coming Soon</title>
-  <meta name="description" content="LarkSkill — Lark/Feishu workspace skills for AI coding agents. Setup guide: portal.larkskill.app/setup">
+  <title>LarkSkill — Lark/Feishu skills for AI coding agents</title>
+  <meta name="description" content="LarkSkill — 20 Lark/Feishu workspace skills for Claude, Cursor, Windsurf, Gemini CLI, and any MCP-compatible agent. Install in under 2 minutes.">
   <link rel="icon" type="image/png" href="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png">
   <link rel="apple-touch-icon" href="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png">
   <meta property="og:title" content="LarkSkill">
-  <meta property="og:description" content="Lark/Feishu workspace skills for AI coding agents.">
+  <meta property="og:description" content="20 Lark/Feishu workspace skills for AI coding agents.">
   <meta property="og:image" content="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://larkskill.app">
@@ -18,11 +18,20 @@
       color-scheme: light dark;
       --bg: #fafafa;
       --fg: #0a0a0a;
-      --muted: #71717a;
+      --muted: #52525b;
+      --border: #d4d4d8;
       --accent: #2563eb;
+      --accent-fg: #ffffff;
     }
     @media (prefers-color-scheme: dark) {
-      :root { --bg: #0a0a0a; --fg: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+      :root {
+        --bg: #0a0a0a;
+        --fg: #fafafa;
+        --muted: #a1a1aa;
+        --border: #3f3f46;
+        --accent: #3b82f6;
+        --accent-fg: #ffffff;
+      }
     }
     * { box-sizing: border-box; }
     html, body { height: 100%; margin: 0; }
@@ -36,17 +45,17 @@
       line-height: 1.5;
     }
     main {
-      max-width: 36rem;
+      max-width: 40rem;
       text-align: center;
     }
     img.logo {
-      width: 88px;
-      height: 88px;
+      width: 80px;
+      height: 80px;
       display: block;
       margin: 0 auto 1.5rem;
     }
     h1 {
-      font-size: clamp(2rem, 6vw, 3rem);
+      font-size: clamp(2rem, 6vw, 2.75rem);
       font-weight: 700;
       letter-spacing: -0.02em;
       margin: 0 0 0.75rem;
@@ -54,7 +63,28 @@
     p.lede {
       color: var(--muted);
       font-size: 1.0625rem;
+      margin: 0 0 1.5rem;
+    }
+    ul.features {
+      list-style: none;
+      padding: 0;
       margin: 0 0 2rem;
+      text-align: left;
+      display: inline-grid;
+      gap: 0.5rem;
+      font-size: 0.9375rem;
+    }
+    ul.features li {
+      color: var(--fg);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+    }
+    ul.features li::before {
+      content: "→";
+      color: var(--accent);
+      font-weight: 600;
+      flex-shrink: 0;
     }
     .links {
       display: flex;
@@ -69,34 +99,52 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 0.9375rem;
-      transition: opacity 0.15s ease;
+      transition: opacity 0.15s ease, background-color 0.15s ease;
     }
-    a.btn:hover { opacity: 0.85; }
+    a.btn:hover { opacity: 0.88; }
+    a.btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      opacity: 1;
+    }
     a.btn-primary {
       background: var(--accent);
-      color: white;
+      color: var(--accent-fg);
     }
     a.btn-ghost {
       color: var(--fg);
-      border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+      border: 1px solid var(--border);
     }
     footer {
       margin-top: 3rem;
       color: var(--muted);
       font-size: 0.8125rem;
     }
+    footer a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    footer a:hover { color: var(--fg); }
   </style>
 </head>
 <body>
   <main>
-    <img class="logo" src="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png" alt="LarkSkill logo">
+    <img class="logo" src="https://lf-package-sg.larksuitecdn.com/obj/lark-static-sgsaas/lark/open/website/share-logo.png" alt="" width="80" height="80">
     <h1>LarkSkill</h1>
-    <p class="lede">Lark / Feishu workspace skills for AI coding agents.<br>A full landing page is on the way.</p>
+    <p class="lede">Lark / Feishu workspace skills for AI coding agents. A full marketing site is on the way.</p>
+    <ul class="features">
+      <li>20 Lark/Feishu domain skills — Base, Calendar, Docs, Drive, Mail, Sheets, Task, Wiki, IM, and more.</li>
+      <li>Works with Claude Code, Claude Desktop, Claude.ai Web, Cursor, Windsurf, Gemini CLI, and any MCP-compatible agent.</li>
+      <li>Ready in under 2 minutes — plugin install or paste a one-shot AI prompt.</li>
+    </ul>
     <div class="links">
-      <a class="btn btn-primary" href="https://portal.larkskill.app/setup">Get started</a>
-      <a class="btn btn-ghost" href="https://portal.larkskill.app">Portal</a>
+      <a class="btn btn-primary" href="https://portal.larkskill.app/setup">Setup guide</a>
+      <a class="btn btn-ghost" href="https://portal.larkskill.app">Open portal</a>
     </div>
-    <footer>© LarkSkill</footer>
+    <footer>
+      © LarkSkill · <a href="https://portal.larkskill.app">portal</a> · <a href="https://portal.larkskill.app/setup">docs</a>
+    </footer>
   </main>
 </body>
 </html>
